@@ -1,0 +1,975 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="/images/favicon.svg" type="image/x-icon" />
+    <script src="script.js" defer></script>
+    <title>WikiClone | Ronald Paek</title>
+  </head>
+  <body>
+    <div id="global-wrapper">
+      <div class="header-container">
+        <header>
+          <div class="header-start">
+            <button class="button" id="menu-button" role="button">
+              <img src="/images/menu-icon.svg" alt="Menu button" />
+            </button>
+            <a href="/" class="logo-container">
+              <img src="/images/wikipedia.png" alt="wikipedia" class="logo" />
+              <span>
+                <img
+                  src="/images/wikipedia-wordmark-en.svg"
+                  alt="wordmark"
+                  class="logo-workdmark"
+                />
+                <img
+                  src="/images/wikipedia-tagline-en.svg"
+                  alt="tagline"
+                  class="logo-tagline"
+                />
+              </span>
+            </a>
+            <nav id="main-nav">
+              <ul>
+                <li>
+                  <h2 class="main-menu">Main menu</h2>
+                  <ul>
+                    <li><a href="#">Main page</a></li>
+                    <li><a href="#">Contents</a></li>
+                    <li><a href="#">Current events</a></li>
+                    <li><a href="#">Random article</a></li>
+                    <li><a href="#">About Wikipedia</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Donate</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <h2 class="contribute">Contribute</h2>
+                  <ul>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Learn to edit</a></li>
+                    <li><a href="#">Community portal</a></li>
+                    <li><a href="#">Recent changes</a></li>
+                    <li><a href="#">Upload file</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header-end">
+            <button class="button" id="search-button">
+              <img src="/images/search-icon-black.svg" alt="Search button" />
+            </button>
+            <form id="search-form" action="">
+              <input
+                type="text"
+                id="search-input"
+                name="search"
+                placeholder="Search Wikipedia"
+              />
+              <button type="submit">Search</button>
+            </form>
+            <div class="login-container">
+              <nav class="user-links">
+                <ul>
+                  <li>
+                    <a href="#">Create account</a>
+                  </li>
+                  <li>
+                    <a href="#">Log in</a>
+                  </li>
+                </ul>
+              </nav>
+              <button class="button" id="user-links-button">
+                <img
+                  src="/images/three-dots-icon.svg"
+                  alt="User links button"
+                />
+              </button>
+              <nav id="user-nav">
+                <ul>
+                  <li class="create-account">
+                    <a href="#">
+                      <img
+                        src="/images/user-add-icon.svg"
+                        alt="Create account"
+                      />
+                      <span>Create account</span>
+                    </a>
+                  </li>
+                  <li class="login-account">
+                    <a href="#">
+                      <img src="/images/log-in-icon.svg" alt="login" />
+                      <span>Login</span>
+                    </a>
+                  </li>
+                  <li class="pages-for-editors">
+                    Pages for logged out<br />editors
+                    <a href="#">(learn more)</a>
+                  </li>
+                  <li><a href="#">Contributions</a></li>
+                  <li><a href="#">Talk</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="main-container">
+        <main class="main">
+          <header>
+            <nav class="left-nav">
+              <ul>
+                <li><a href="#" class="active">Main Page</a></li>
+                <li><a href="#">Talk</a></li>
+              </ul>
+            </nav>
+            <nav id="right-nav" class="right-nav">
+              <ul>
+                <li><a href="#" class="active">Read</a></li>
+                <li><a href="#">View source</a></li>
+                <li><a href="#">View History</a></li>
+                <li>
+                  <a href="#" id="drop-down" class="drop-down"
+                    >Tools<span class="tools">
+                      <img
+                        src="/images/chevron-down-icon.svg"
+                        alt="Chevron drop down menu"
+                      />
+                    </span>
+                  </a>
+                </li>
+              </ul>
+              <div id="tools-drop-down">
+                <ul>
+                  <li class="topic">Tools</li>
+                </ul>
+                <ul>
+                  <li class="topic">General</li>
+                  <li><a href="#">What links here</a></li>
+                  <li><a href="#">Related changes</a></li>
+                  <li><a href="#">Special pages</a></li>
+                  <li><a href="#">Permanent link</a></li>
+                  <li><a href="#">Page information</a></li>
+                  <li><a href="#">Wikidata item</a></li>
+                </ul>
+                <ul>
+                  <li class="topic">Print/export</li>
+                  <li><a href="#">Download as PDF</a></li>
+                  <li><a href="#">Printable version</a></li>
+                </ul>
+                <ul>
+                  <li class="topic">In other projects</li>
+                  <li><a href="#">Wikimedia Commons</a></li>
+                  <li><a href="#">MediaWiki</a></li>
+                  <li><a href="#">Meta-Wiki</a></li>
+                  <li><a href="#">Wikimedia Outreach</a></li>
+                  <li>
+                    <a href="#" class="multilingual">Multilingual Wikisource</a>
+                  </li>
+                  <li><a href="#">Wikispecies</a></li>
+                  <li><a href="#">Wikibooks</a></li>
+                  <li><a href="#">Wikidata</a></li>
+                  <li><a href="#">Wikimania</a></li>
+                  <li><a href="#">Wikinews</a></li>
+                  <li><a href="#">Wikiquote</a></li>
+                  <li><a href="#">Wikisource</a></li>
+                  <li><a href="#">Wikiversity</a></li>
+                  <li><a href="#">Wikivoyage</a></li>
+                  <li><a href="#">Wiktionary</a></li>
+                </ul>
+              </div>
+            </nav>
+          </header>
+          <div class="header-container">
+            <h1>Welcome to <a href="#" class="wikipedia">Wikipedia</a>,</h1>
+            <p class="first-p">
+              the <a href="#">free</a> <a href="#">encyclopedia</a> that
+              <a href="#">anyone can edit</a>.
+            </p>
+            <p class="second-p">
+              <a href="#">6,692,569</a> articles in <a href="#">English</a>
+            </p>
+          </div>
+          <div class="column">
+            <div class="featured">
+              <h2><span>From today's featured article</span></h2>
+              <div class="">
+                <div class="card">
+                  <a
+                    href="/images/Coccinella-septempunctata-15-fws.jpg"
+                    target="_blank"
+                    class="image-container"
+                  >
+                    <img
+                      src="/images/Coccinella-septempunctata-15-fws.jpg"
+                      alt="Greek village of Erateini"
+                    />
+                  </a>
+                  <em
+                    ><a href="#" class="coccinella"
+                      >Coccinella<br />
+                      septempunctata</a
+                    ></em
+                  >
+                </div>
+                <p class="featured-content">
+                  <strong><a href="#">Coccinellidae</a></strong> is a
+                  <a href="#">family</a> of small <a href="#">beetles</a> called
+                  ladybugs in <a href="#">North America</a> and ladybirds
+                  elsewhere. More than 6,000 species occur globally in a variety
+                  of habitats. They are oval with a domed back. Adult females
+                  are larger than males. Many species have
+                  <a href="#">warning</a> colours and patterns that warn
+                  <a href="#">predators</a> that they are distasteful. Most are
+                  <a href="#">carnivorous</a>, preying on insects such as
+                  <a href="#">aphids</a>. They are
+                  <a href="#">promiscuous</a> breeders, and may lay their eggs
+                  near prey colonies, so their <a href="#">larvae</a> have a
+                  close food source. They <a href="#">develop</a> from larva to
+                  <a href="#">pupa</a> to adult. Temperate species
+                  <a href="#">hibernate</a> during the winter; tropical species
+                  are dormant during the <a href="#">dry season</a>. Since they
+                  prey on pests, most coccinellids are
+                  <a href="#">beneficial insects</a> and some have been
+                  introduced outside their range as
+                  <a href="#">biological control</a> agents. A few are pests
+                  themselves, and invasive forms pose a threat to native
+                  species. Threats to coccinellids include
+                  <a href="#">climate change</a> and
+                  <a href="#">habitat destruction</a>. They feature in
+                  <a href="#">folklore</a>, religion, poetry, and
+                  <a href="#">nursery rhymes</a>. (<strong
+                    ><a href="#">Full article...</a></strong
+                  >)
+                </p>
+                <div class="recently-featured">
+                  <span>Recently featured:</span>
+                  <ul>
+                    <li class="dot"><a href="#">1995 Aigio earthquake</a></li>
+                    <li class="dot"><a href="#">Edward Dando</a></li>
+                    <li>
+                      <a href="#">"My Man" (Tamar Braxton song)</a>
+                    </li>
+                  </ul>
+                </div>
+                <ul class="about-list">
+                  <li class="dot"><a href="#">Archive</a></li>
+                  <li class="dot"><a href="#">By email</a></li>
+                  <li class="dot"><a href="#">More featured articles</a></li>
+                  <li><a href="#">About</a></li>
+                </ul>
+              </div>
+              <h2><span>Did you know ...</span></h2>
+              <div class="did-you-know">
+                <div class="card">
+                  <a
+                    href="/images/Red_phase,_Nerodia_clarkii_compressicauda.jpg"
+                    target="_blank"
+                    class="image-container"
+                  >
+                    <img
+                      src="/images/Red_phase,_Nerodia_clarkii_compressicauda.jpg"
+                      alt="Two salt marsh snake"
+                    />
+                  </a>
+                  <p>Two salt marsh snakes</p>
+                </div>
+                <ul>
+                  <li>
+                    ... that
+                    <a href="#" class="bold">salt marsh snakes</a> (examples
+                    pictured) can be as short as 15 inches (38 cm)?
+                  </li>
+                  <li>
+                    ... that
+                    <a href="#" class="bold">I Gede Pasek Suardika</a> resigned
+                    the chairmanship of the
+                    <a href="#">Nusantara Awakening Party</a> to be succeeded by
+                    his formerly imprisoned colleague
+                    <a href="#">Anas Urbaningrum</a>?
+                  </li>
+
+                  <li>
+                    ... that the
+                    <a href="#" class="bold">Sea to Sky Gondola</a> was
+                    vandalized twice in two consecutive years, costing the
+                    company CA$ millions?
+                  </li>
+                  <li>
+                    ... that Indian singer
+                    <a href="#" class="bold">Sudakshina Sarma</a> sang in
+                    <a href="#">Assamese</a>
+                    as <a href="#">Mahatma Gandhi</a>'s ashes were immersed in
+                    the <a href="#">Brahmaputra River</a>?
+                  </li>
+                  <li>
+                    ... that <a href="#">Solo Per Due</a> claims to be the
+                    smallest restaurant in the world and only serves meals for
+                    two?
+                  </li>
+                  <li>
+                    ... that <a href="#" class="bold">Jarren Horton</a>'s
+                    childhood dream was to serve as an American football
+                    <a href="#">defensive coordinator</a>
+                    under his father, and he now does so with the
+                    <a href="#">Pittsburgh Maulers</a>?
+                  </li>
+                  <li>
+                    ... that the 14th- and 15th-century Azerbaijani poet
+                    <a href="#" class="bold">Imadaddin Nasimi</a> was possibly
+                    <a href="#">flayed</a> alive after he was accused of being a
+                    <a href="#">kafir</a> by <a href="#">Sunni</a> scholars?
+                  </li>
+                  <li>
+                    ... that <a href="#" class="bold">Habiburokhman</a> made a
+                    public bet that <a href="#">Basuki Tjahaja Purnama</a> would
+                    not be able to collect one million
+                    <a href="#">ID cards</a> &#8722; or else he would jump off
+                    the <a href="#">National Monument</a>?
+                  </li>
+                  <ul class="did-you-know-list">
+                    <li class="dot">
+                      <a href="#" class="bold">Archive</a>
+                    </li>
+                    <li class="dot">
+                      <a href="#" class="bold">Start a new article</a>
+                    </li>
+                    <li>
+                      <a href="#" class="bold">Nominate an article</a>
+                    </li>
+                  </ul>
+                </ul>
+              </div>
+            </div>
+            <div class="in-the-news">
+              <h2><span>In the news</span></h2>
+              <div>
+                <div class="card">
+                  <a href="#" target="_blank" class="image-container">
+                    <img
+                      src="/images/Chris_Woakes_2022.jpg"
+                      alt="Chris Woakes"
+                    />
+                  </a>
+                  <p>Chris Woakes</p>
+                </div>
+                <ul>
+                  <li>
+                    In <a href="#">cricket</a>,
+                    <a href="#" class="bold">the Ashes</a> concludes with
+                    <a href="#">Australia</a> retaining
+                    <a href="#">the trophy</a>, drawing the series against
+                    <a href="#">England</a> (<a href="#"
+                      >Compton&#8722;Miller Medal</a
+                    >
+                    recipient <a href="#">Chris Woakes</a> pictured).
+                  </li>
+                  <li>
+                    In cycling, <a href="#">Demi Vollering</a> wins
+                    <a href="#" class="bold">the Tour de France Femmes</a>.
+                  </li>
+                  <li>
+                    <a href="#">IS&#8722;</a>KP kill more than 50 people in
+                    <a href="#">a suicide bombing</a> at a political rally in
+                    <a href="#">Khar</a>, Pakistan.
+                  </li>
+                  <li>
+                    <a href="#" class="bold">Typhoon Doksuri</a> kills 76 people
+                    across the Philippines, Taiwan, and China.
+                  </li>
+                </ul>
+                <div class="ongoing-container">
+                  <div>
+                    <ul>
+                      <li>
+                        <a href="#" class="bold"><span>Ongoing</span></a
+                        >:&nbsp;
+                      </li>
+                      <li class="dot">
+                        <a href="#">FIFA women's World Cup</a>
+                      </li>
+                      <li class="dot">
+                        <a href="#">Russian invasion of Ukraine</a>
+                      </li>
+                      <li><a href="#">Sudan conflict</a></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <ul>
+                      <li>
+                        <a href="#" class="bold"><span>Recent deaths</span></a
+                        >:&nbsp;
+                      </li>
+                      <li class="dot"><a href="#">Robbie Shepherd</a></li>
+                      <li class="dot"><a href="#">Angus Cloud</a></li>
+                      <li class="dot"><a href="#">Henri Konan Bédié</a></li>
+                      <li class="dot"><a href="#">Sheila Oliver</a></li>
+                      <li class="dot"><a href="#">George Wilson</a></li>
+                      <li><a href="#">Paul Reubens</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="nominate-container">
+                  <a href="#" class="bold nominate">Nominate an article</a>
+                </div>
+              </div>
+              <h2 class="on-this-day"><span>On this day</span></h2>
+              <div>
+                <p>
+                  <a href="#" class="bold">August 5</a>:
+                  <a href="#">Victory and Homeland Thanksgiving Day</a> in
+                  Croatia (<a href="#">1995</a>)
+                </p>
+                <div class="on-this-day-float">
+                  <a
+                    href="/images/Henry_I_of_England.jpg"
+                    target="_blank"
+                    class="image-container"
+                    id="on-this-day-image"
+                  >
+                    <img
+                      src="/images/Henry_I_of_England.jpg"
+                      alt="Henry I of England"
+                    />
+                  </a>
+                  <p>Hendry I of England</p>
+                </div>
+                <ul class="first-list">
+                  <li>
+                    <a href="#">AD 25</a> &#8722;
+                    <a href="#">Liu Xiu</a> proclaimed himself the
+                    <a href="#" class="bold">monarch of the Han dynasty</a> as
+                    Emperor Guangwu.
+                  </li>
+                  <li>
+                    <a href="#">1100</a> &#8722;
+                    <a href="#" class="bold">Henry I</a> (pictured) was crowned
+                    <a href="#">King of England</a> at
+                    <a href="#">Westminster Abbey</a>.
+                  </li>
+                  <li>
+                    <a href="#">1689</a> &#8722; <a href="#">Beaver Wars</a>:
+                    Aggravated by increased French incursions into their
+                    territory, a large force of <a href="#">Mohawk</a> warriors
+                    <a href="#">substantially destroyed the settlement</a> of
+                    <a href="#">Lachine </a>in present-day
+                    <a href="#">Quebec</a>.
+                  </li>
+                  <li>
+                    <a href="#">1969</a> &#8722;
+                    <a href="#">Police raided a screening</a> of the film
+                    <a href="#">Lonesome Cowboys</a> in <a href="#">Atlanta</a>,
+                    Georgia, leading to the creation of the
+                    <a href="#">Gay Liberation Front</a>.
+                  </li>
+                  <li>
+                    <a href="#">1993</a> &#8722;
+                    <a href="#">Wizards of the Coast</a> released
+                    <a href="#" class="bold">Magic: The Gathering</a>, the first
+                    <a href="#">trading card game</a>.
+                  </li>
+                </ul>
+                <ul id="second-list">
+                  <li class="dot">
+                    <a href="#" class="bold">Dorothy Thomas</a> (<abbr
+                      title="died"
+                      >d.</abbr
+                    >
+                    1846)
+                  </li>
+                  <li class="dot">
+                    <a href="#" class="bold">Jerry Pentland</a> (<abbr
+                      title="born"
+                      >b.</abbr
+                    >
+                    1894)
+                  </li>
+                  <li class="dot">
+                    <a href="#" class="bold">Jacquetta Hawkes</a> (<abbr
+                      title="born"
+                      >b.</abbr
+                    >
+                    1910)
+                  </li>
+                  <li>
+                    <a href="#" class="bold">Kirk Urso</a> (<abbr title="died"
+                      >d.</abbr
+                    >
+                    2012)
+                  </li>
+                </ul>
+                <ul id="third-list">
+                  <li>More anniversaries:&nbsp;</li>
+                  <li class="dot">
+                    <a href="#">August 4</a>
+                  </li>
+                  <li class="dot">
+                    <a href="#">August 5</a>
+                  </li>
+                  <li>
+                    <a href="#">August 6</a>
+                  </li>
+                </ul>
+                <ul id="on-this-day-footer">
+                  <li class="dot">
+                    <a href="#" class="bold">Archive</a>
+                  </li>
+                  <li class="dot">
+                    <a href="#" class="bold">By email</a>
+                  </li>
+                  <li>
+                    <a href="#" class="bold">List of days of the year</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div id="featured-picture-today">
+              <h2><span>Today's featured picture</span></h2>
+              <div>
+                <div class="image-container">
+                  <a
+                    href="/images/Viburnum_opulus_fruits_-_Keila.jpg"
+                    target="_blank"
+                    class="today-image-container"
+                  >
+                    <img
+                      src="/images/Viburnum_opulus_fruits_-_Keila.jpg"
+                      alt="Vibrunum opulus fruit"
+                    />
+                  </a>
+                </div>
+                <div>
+                  <p>
+                    <a href="#" class="bold">Viburnum opulus</a>, the guelder
+                    rose, is a species of <a href="#">flowering plant</a> in the
+                    family <a href="#">Adoxaceae</a> native to Europe, northern
+                    Africa and central Asia. Its common name relates to the
+                    Dutch province of <a href="#">Gelderland</a>, where a
+                    popular cultivar, the snowball tree, supposedly originated.
+                    This photograph of a V. opulus
+                    <a href="#">infructescence</a> (ensemble of
+                    <a href="#">fruits</a>) was taken in <a href="#">Keila</a>,
+                    Estonia.
+                  </p>
+                  <p class="small">
+                    Photograph credit: <a href="#">Ivar Leidus</a>
+                  </p>
+                  <div class="recent-featured">
+                    <ul>
+                      <li>Recently featured:&nbsp;</li>
+                      <li class="dot">
+                        <a href="#">Jacques Isnardon</a>
+                      </li>
+                      <li class="dot">
+                        <a href="#">Sol de Mañana</a>
+                      </li>
+                      <li class="dot">
+                        <a href="#">San Francisco cable car system</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <ul class="featured-pic-footer">
+                    <li class="dot"><a href="#" class="bold">Archive</a></li>
+                    <li><a href="#" class="bold">More featured pictures</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="other-areas">
+              <h2><span>Other areas of Wikipedia</span></h2>
+              <div>
+                <ul id="other-areas-list">
+                  <li>
+                    <a href="#" class="bold">Community portal</a> &#8722; The
+                    central hub for editors, with resources, links, tasks, and
+                    announcements.
+                  </li>
+                  <li>
+                    <a href="#" class="bold">Village pump</a> &#8722; Forum for
+                    discussions about Wikipedia itself, including policies and
+                    technical issues.
+                  </li>
+                  <li>
+                    <a href="#" class="bold">Site news</a> &#8722; Sources of
+                    news about Wikipedia and the broader Wikimedia movement.
+                  </li>
+                  <li>
+                    <a href="#" class="bold">Teahouse</a> &#8722; Ask basic
+                    questions about using or editing Wikipedia.
+                  </li>
+                  <li>
+                    <a href="#" class="bold">Help desk</a> &#8722; Ask questions
+                    about using or editing Wikipedia.
+                  </li>
+                  <li>
+                    <a href="#" class="bold">Reference desk</a> &#8722; Ask
+                    research questions about encyclopedic topics.
+                  </li>
+                  <li>
+                    <a href="#" class="bold">Content portals</a> &#8722; A
+                    unique way to navigate the encyclopedia.
+                  </li>
+                </ul>
+              </div>
+              <h2><span>Wikipedia's sister projects</span></h2>
+              <div>
+                <p>
+                  Wikipedia is written by volunteer editors and hosted by the
+                  <a href="#">Wikimedia Foundation</a>, a non-profit
+                  organization that also hosts a range of other volunteer
+                  <a href="#">projects</a>:
+                </p>
+                <ul class="sister-projects-list">
+                  <li>
+                    <a
+                      href="/images/Commons-logo.svg.webp"
+                      target="_blank"
+                      class="icon-container"
+                    >
+                      <img
+                        src="/images/Commons-logo.svg.webp"
+                        alt="Wikimedia Commons"
+                      />
+                    </a>
+                    <div>
+                      <a href="#" class="bold">Commons</a>
+                      <span>Free media repository</span>
+                    </div>
+                  </li>
+                  <li>
+                    <a
+                      href="/images/MediaWiki-2020-icon.svg.webp"
+                      target="_blank"
+                      class="icon-container"
+                    >
+                      <img
+                        src="/images/MediaWiki-2020-icon.svg.webp"
+                        alt="Wikimedia MediaWiki"
+                      />
+                    </a>
+                    <div>
+                      <a href="#" class="bold">MediaWiki</a>
+                      <span>Wiki software development</span>
+                    </div>
+                  </li>
+                  <li>
+                    <a
+                      href="/images/Wikimedia_Community_Logo.svg.webp"
+                      target="_blank"
+                      class="icon-container"
+                    >
+                      <img
+                        src="/images/Wikimedia_Community_Logo.svg.webp"
+                        alt="Wikimedia Community"
+                      />
+                    </a>
+                    <div>
+                      <a href="#" class="bold">Meta-Wiki</a>
+                      <span>Wikimedia project coordination</span>
+                    </div>
+                  </li>
+                  <li>
+                    <a
+                      href="/images/Wikibooks-logo.svg.webp"
+                      target="_blank"
+                      class="icon-container"
+                    >
+                      <img
+                        src="/images/Wikibooks-logo.svg.webp"
+                        alt="Wikibooks"
+                      />
+                    </a>
+                    <div>
+                      <a href="#" class="bold">Wikibooks</a>
+                      <span>Free textbooks and manuals</span>
+                    </div>
+                  </li>
+                  <li>
+                    <a
+                      href="/images/94px-Wikidata-logo.svg.webp"
+                      target="_blank"
+                      class="icon-container"
+                    >
+                      <img
+                        src="/images/94px-Wikidata-logo.svg.webp"
+                        alt="Wikibooks"
+                      />
+                    </a>
+                    <div>
+                      <a href="#" class="bold">Wikidata</a>
+                      <span>Free knowledge base</span>
+                    </div>
+                  </li>
+                  <li>
+                    <a
+                      href="/images/Wikinews-logo.svg.webp"
+                      target="_blank"
+                      class="icon-container"
+                    >
+                      <img
+                        src="/images/wikinews-logo.svg.webp"
+                        alt="Wikibooks"
+                      />
+                    </a>
+                    <div>
+                      <a href="#" class="bold">Wikidata</a>
+                      <span>Free knowledge base</span>
+                    </div>
+                  </li>
+                  <li>
+                    <a
+                      href="/images/Wikiquote-logo.svg.webp"
+                      target="_blank"
+                      class="icon-container"
+                    >
+                      <img
+                        src="/images/Wikiquote-logo.svg.webp"
+                        alt="Wikibooks"
+                      />
+                    </a>
+                    <div>
+                      <a href="#" class="bold">Wikiquote</a>
+                      <span>Collection of quotations</span>
+                    </div>
+                  </li>
+                  <li>
+                    <a
+                      href="/images/Wikisource-logo.svg.webp"
+                      target="_blank"
+                      class="icon-container"
+                    >
+                      <img
+                        src="/images/Wikisource-logo.svg.webp"
+                        alt="Wikisource"
+                      />
+                    </a>
+                    <div>
+                      <a href="#" class="bold">Wikisource</a>
+                      <span>Free-content library</span>
+                    </div>
+                  </li>
+                  <li>
+                    <a
+                      href="/images/Wikispecies-logo.svg.webp"
+                      target="_blank"
+                      class="icon-container"
+                    >
+                      <img
+                        src="/images/Wikispecies-logo.svg.webp"
+                        alt="Wikispecies"
+                      />
+                    </a>
+                    <div>
+                      <a href="#" class="bold">Wikispecies</a>
+                      <span>Directory of species</span>
+                    </div>
+                  </li>
+                  <li>
+                    <a
+                      href="/images/82px-Wikiversity_logo_2017.svg.webp"
+                      target="_blank"
+                      class="icon-container"
+                    >
+                      <img
+                        src="/images/82px-Wikiversity_logo_2017.svg.webp"
+                        alt="Wikiversity"
+                      />
+                    </a>
+                    <div>
+                      <a href="#" class="bold">Wikiversity</a>
+                      <span>Free learning tools</span>
+                    </div>
+                  </li>
+                  <li>
+                    <a
+                      href="/images/Wikivoyage-Logo-v3-icon.svg.webp"
+                      target="_blank"
+                      class="icon-container"
+                    >
+                      <img
+                        src="/images/Wikivoyage-Logo-v3-icon.svg.webp"
+                        alt="Wikiversity"
+                      />
+                    </a>
+                    <div>
+                      <a href="#" class="bold">Wikivoyage</a>
+                      <span>Free travel guide</span>
+                    </div>
+                  </li>
+                  <li>
+                    <a
+                      href="/images/70px-Wiktionary-logo-v2.svg.webp"
+                      target="_blank"
+                      class="icon-container"
+                    >
+                      <img
+                        src="/images/70px-Wiktionary-logo-v2.svg.webp"
+                        alt="Wikitionary"
+                      />
+                    </a>
+                    <div>
+                      <a href="#" class="bold">Wikitionary</a>
+                      <span>Dictionary and thesaurus</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <h2 id="wiki-lang-h2"><span>Wikipedia languages</span></h2>
+              <div class="wiki-lang-container">
+                <p>
+                  This Wikipedia is written in <a href="#">English</a>. Many
+                  <a href="#">other Wikipedias are available</a>; some of the
+                  largest are listed below.
+                </p>
+                <div class="articles-container">
+                  <div>
+                    <div class="article-span-container">
+                      <span class="left-bar"></span>
+                      <span class="middle-bar">1,000,000+ articles</span>
+                      <span class="right-bar"></span>
+                    </div>
+                    <ul class="wiki-languages">
+                      <li class="dot"><a href="#">العربية</a></li>
+                      <li class="dot"><a href="#">Deutsch</a></li>
+                      <li class="dot"><a href="#">Español</a></li>
+                      <li class="dot"><a href="#">Français</a></li>
+                      <li class="dot"><a href="#">Italiano</a></li>
+                      <li class="dot"><a href="#">Nederlands</a></li>
+                      <li class="dot"><a href="#">日本語</a></li>
+                      <li class="dot"><a href="#">Polski</a></li>
+                      <li class="dot"><a href="#">Português</a></li>
+                      <li class="dot"><a href="#">Русский</a></li>
+                      <li class="dot"><a href="#">Svenska</a></li>
+                      <li class="dot"><a href="#">Українська</a></li>
+                      <li class="dot"><a href="#">Tiếng Việt</a></li>
+                      <li><a href="#">中文</a></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <div class="article-span-container">
+                      <span class="left-bar"></span>
+                      <span class="middle-bar">250,000+ articles</span>
+                      <span class="right-bar"></span>
+                    </div>
+                    <ul class="wiki-languages">
+                      <li class="dot"><a href="#">Bahasa Indonesia</a></li>
+                      <li class="dot"><a href="#">Bahasa Melayu</a></li>
+                      <li class="dot"><a href="#">Bân-lâm-gú</a></li>
+                      <li class="dot"><a href="#">Български</a></li>
+                      <li class="dot"><a href="#">Català</a></li>
+                      <li class="dot"><a href="#">Čeština</a></li>
+                      <li class="dot"><a href="#">Dansk</a></li>
+                      <li class="dot"><a href="#">Esperanto</a></li>
+                      <li class="dot"><a href="#">Euskara</a></li>
+                      <li class="dot"><a href="#">עברית</a></li>
+                      <li class="dot"><a href="#">Հայերեն</a></li>
+                      <li class="dot"><a href="#">한국어</a></li>
+                      <li class="dot"><a href="#">Magyar</a></li>
+                      <li class="dot"><a href="#">Norsk bokmål</a></li>
+                      <li class="dot"><a href="#">Română</a></li>
+                      <li class="dot"><a href="#">Srpski</a></li>
+                      <li class="dot"><a href="#">Srpskohrvatski</a></li>
+                      <li class="dot"><a href="#">Suomi</a></li>
+                      <li><a href="#">Türkçe</a></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <div class="article-span-container">
+                      <span class="left-bar"></span>
+                      <span class="middle-bar">50,000+ articles</span>
+                      <span class="right-bar"></span>
+                    </div>
+                    <ul class="wiki-languages">
+                      <li class="dot"><a href="#">Asturianu</a></li>
+                      <li class="dot"><a href="#">বাংলা</a></li>
+                      <li class="dot"><a href="#">Bosanski</a></li>
+                      <li class="dot"><a href="#">Eesti</a></li>
+                      <li class="dot"><a href="#">Ελληνικά</a></li>
+                      <li class="dot"><a href="#">Simple English</a></li>
+                      <li class="dot"><a href="#">Frysk</a></li>
+                      <li class="dot"><a href="#">Gaeilge</a></li>
+                      <li class="dot"><a href="#">Galego</a></li>
+                      <li class="dot"><a href="#">Hrvatski</a></li>
+                      <li class="dot"><a href="#">ქართული</a></li>
+                      <li class="dot"><a href="#">Latviešu</a></li>
+                      <li class="dot"><a href="#">Lietuvių</a></li>
+                      <li class="dot"><a href="#">മലയാളം</a></li>
+                      <li class="dot"><a href="#">Македонски</a></li>
+                      <li class="dot"><a href="#">Norsk nynorsk</a></li>
+                      <li class="dot"><a href="#">ਪੰਜਾਬੀ</a></li>
+                      <li class="dot"><a href="#">Shqip</a></li>
+                      <li class="dot"><a href="#">Slovenčina</a></li>
+                      <li class="dot"><a href="#">Slovenščina</a></li>
+                      <li class="dot"><a href="#">ไทย</a></li>
+                      <li class="dot"><a href="#">తెలుగు</a></li>
+                      <li>
+                        <a href="#">O&#699;zbekcha / ўзбекча</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="languages-dropdown-container">
+            <a href="#" id="languages-dropdown"
+              ><span
+                >文<span class="lower">A</span
+                ><span class="bold">47 languages</span></span
+              ><img src="images/chevron-down-icon.svg" alt=""
+            /></a>
+          </div>
+        </main>
+      </div>
+      <div class="footer-container">
+        <footer class="footer">
+          <p>
+            Text is available under the
+            <a href="#">Creative Commons Attribution-ShareAlike License 4.0</a>;
+            additional terms may apply. By using this site, you agree to the
+            <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>.
+            Wikipedia® is a registered trademark of the
+            <a href="#">Wikimedia Foundation, Inc.</a>, a non-profit
+            organization.
+          </p>
+          <div class="footer-link-banner-container">
+            <ul class="footer-links-list">
+              <li><a href="#">Privacy policy</a></li>
+              <li><a href="#">About Wikipedia</a></li>
+              <li><a href="#">Disclaimers</a></li>
+              <li><a href="#">Contact Wikipedia</a></li>
+              <li><a href="#">Code of Conduct</a></li>
+              <li><a href="#">Mobile view</a></li>
+              <li><a href="#">Developers</a></li>
+              <li><a href="#">Statistics</a></li>
+              <li><a href="#">Cookie statement</a></li>
+            </ul>
+            <div class="footer-banners-container">
+              <ul class="footer-banners">
+                <li>
+                  <a href="#" class="banner-container">
+                    <img
+                      src="/images/wikimedia-button-2x.png"
+                      alt="Wikimedia banner"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="banner-container">
+                    <img
+                      src="/images/poweredby_mediawiki_176x62.png"
+                      alt="Mediawiki banner"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
